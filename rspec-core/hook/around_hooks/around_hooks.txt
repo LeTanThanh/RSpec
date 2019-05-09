@@ -1,0 +1,15 @@
+AROUND HOOKS
+
+Around hooks receive the example as a block agrument,extended to bahaves as a proc.
+This lets you define code that should be executed before and after the example.
+Ofcourse, you can do the same thing with before and after hooks: and it's often cleaner to do so.
+
+Where around hooks shine is when you want to run an example within a block
+For instance, if your database library offers a transaction method that receives a block,
+you can use an around hook to cleanly open and close transaction around the example
+
+WARNING: around hooks do not share state with the example the before and after hook do.
+This mean that you cannot share instance variables between around hooks and examples
+
+WARNING: Mock frameworks are set up and torn down within the context of running the example.
+You cannot interact with them directly in a around hooks.
