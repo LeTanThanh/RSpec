@@ -1,0 +1,17 @@
+FILTERS
+
+before, after, and around hooks defined in the block passed to RSpec.configure 
+can be constrained to specify examples and/or groups using metadata as a filter.
+
+RSpec.configure do |config|
+  config.before(:example, type: :model) do
+  end
+end
+
+RSpec.describe "something", type: :model do
+end
+
+Note that filtered :context hooks will still be applied to individual examples with matching metadata
+in effect, every example has s singleton example group containing just the one example group
+
+You can also specify metadata using only symbols
