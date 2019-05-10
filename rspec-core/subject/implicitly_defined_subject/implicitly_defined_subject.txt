@@ -1,0 +1,7 @@
+IMPLICITLY DEFINED SUBJECT
+
+If the first argument to the outermost example group is a class
+an instance of that class is exposed to each example via the subject method
+
+While the examples below demonstrate how subject can be used as a user-facing concept
+we recommend that you reserver it for support of custom matcher and/or extension libraries that hide its from example
