@@ -1,0 +1,20 @@
+ONE-LINER SYNTAX
+
+RSpec supports a one-liner syntax for setting an expectation on the subject.
+RSpec will give the examples a doc string that is auto-generated from the matcher used in the example.
+This is designed specificially to help avoid duplication in situations
+where the doc string and matcher used in the example mirror each other exactly.
+When used excessively, it can produce documemtation output
+that does not read well or contribute to understanding the object you are describing.
+
+This comes in two flavors:
++ is_expected is defined simply as expect(subject)
+and is designed for when you are using rspec-expectations with its newer expect-based syntax
++ should was designed back when rspec-expectation only had a should-based-syntax.
+However, it continues to be available and work even if the :should syntax is disabled 
+(since that merely removes Object#should but this is RSpec::Core::ExampleGroup#should)
+
+Notes:
++ This feature is only available when using rspec-expectations
++ Examples defined using this one-liner syntax cannot be directly selected from the comamnd line using the --exammple option
++ The one-liner syntax only works with non-block expectations
