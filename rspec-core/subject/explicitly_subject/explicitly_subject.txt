@@ -1,0 +1,16 @@
+EXPLICIT SUBJECT
+
+Use subject in the group scope to explicitly define the value that is returned by the subject method in the example scope.
+
+Note that while the examples below demonstrate how the subject helper can be ised as a user-facing concept
+we recommended that you reserve it for support os custom matcher and/or extension libraries that hide its use from examples.
+
+A named subject improves on the explicitly subject by assigning it a contextually semantic name.
+Since a named subject is an explicitly subject,
+it still defines the value that is returned by the subject method in th example scope.
+However, it defines an addtional helper method with the provided name.
+This helper methods is memoized.
+The value is cached across multiple calls in the same example but not across examples.
+
+We recommended using the named helper method over subject in the examples
+For more information about declaring a subject, see API docs
