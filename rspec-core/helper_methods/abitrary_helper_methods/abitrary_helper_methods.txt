@@ -1,0 +1,7 @@
+ABITRARY HELPER METHODS
+
+You can define methods in any example group using Ruby's def keyword
+or define_method method.
+These helper methods are exposed to examples in the group
+in which they are defined and group nested within that group,
+but not parent or sibling groups.
