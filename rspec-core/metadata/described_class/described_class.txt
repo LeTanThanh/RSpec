@@ -1,0 +1,4 @@
+DESCRIBED CLASS
+
+If the first argument to the outermost example group is a class,
+the class is exposed to each example via described_class() method.
