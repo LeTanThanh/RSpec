@@ -1,0 +1,12 @@
+USER DEFINED METADATA
+
+You can attach user-defined metadata to any example group or example/
+Pass a hash as the last argument(before the block) to describe, context or it.
+RSpec supports many configuration options that apply only to certain examples or groups based on the metadata.
+
+Metadata defined on an example group is available (and can be overriden) by any sub-group
+or from any example in that group or a sub-group.
+
+In addtion, you can specify metadata using just symbols.
+Each symbol passes as an arguments to describe, context or it will be a key in the metadata hash,
+with a corresponding value of true.
